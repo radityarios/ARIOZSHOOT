@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - AriozShoot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="logo1.png" alt="AriozShoot" class="brand-logo">
+                <div class="brand-info">
+                    <h1 id="cursed-threads" class="brand-name">ARIOZSHOOT</h1>
+                    <p>Abadikan Momen Pada Diri Anda!
+                        
+                        <p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <span class="menu-icon"></span>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="produk.html" class="nav-link">Produk</a></li>
+                    <li><a href="saran.html" class="nav-link">Saran</a></li>
+                    <li><a href="https://www.instagram.com/ariozshoot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="nav-link nav-cta">Contact Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="about-us">
+            <h2>Tentang Kami</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Arioz Shoot adalah vendor fotografer dari Raditya Ario Seto. Nama Arioz diambil dari nama sang pemilik. AriozShoot melayani berbagai tema photography. AriozShoot siap menerima panggilanmu!.</p>
+                    <h3>Visi</h3>
+                    <p>Menjadi tujuan utama para klien atau customer yang sedang mencari fotografer yang berpengalaman dan ahli dalam bidangnya dengan harga yang terjangkau dan fleksibel.</p>
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Memberikan hasil foto yang maksimal</li>
+                        <li>Menghadirkan pelayanan yang eksklusif</li>
+                        <li>Memberikan harga yang sangat terjangkau di kantong</li>
+                        <li>Membuat klien atau customer bahagia dan senang karena kami</li>
+                    </ul>
+                </div>
+            </div>
+            
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo2.png" alt="Arioz Shoot Logo" class="footer-logo">
+                    <div class="brand-text">
+                        <h2>ARIOZSHOOT</h2>
+                        <p>Fotografer Terbaik dan Termurah di Semarang.</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3></h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="saran.html">Saran</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+62 856-4164-7050</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>ariozshoot@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏢</span>
+                            <span>Jl.Dr Cipto 512C , Semarang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2024 AriozShoot. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a>Privacy Policy</a>
+                    <span class="divider"> • </span>
+                    <a >Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        const productCards = document.querySelectorAll('.product-card');
+        const modal = document.getElementById('productModal');
+        const modalClose = modal.querySelector('.modal-close');
+        const modalImage = modal.querySelector('.modal-image');
+        const modalTitle = modal.querySelector('.modal-title');
+
+        productCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const image = card.querySelector('.product-image').src;
+                const title = card.querySelector('h3').textContent;
+                
+                modalImage.src = image;
+                modalTitle.textContent = title;
+                modal.style.display = 'block';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
