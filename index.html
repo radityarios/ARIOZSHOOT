@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arioz Shoot - Portofolio dan Katalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="logo1.png" alt="AriozShoot" class="brand-logo">
+                <div class="brand-info">
+                    <h1 id="cursed-threads" class="brand-name">ARIOZSHOOT</h1>
+                    <p>Abadikan Momen Pada Diri Anda!</p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <span class="menu-icon"></span>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="produk.html" class="nav-link">Produk</a></li>
+                    <li><a href="saran.html" class="nav-link">Saran</a></li>
+                    <li><a href="https://www.instagram.com/ariozshoot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="nav-link nav-cta">Contact Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero section">
+            <h2>Selamat Datang di ARIOZ SHOOT</h2>
+            <p>All Theme Photography</p>
+        </section>
+
+        <section class="featured-products section">
+            <h2>Produk Unggulan</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="SPORT.jpg" alt="Gojo Hoodie" class="product-image">
+                    <h3>Sport Photography</h3>
+                    <p>Rp 250.000</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="AGENDA.jpg" alt="Sukuna T-Shirt" class="product-image">
+                    <h3>Agenda Photography</h3>
+                    <p>Rp 200.000</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="AUTOMOTIVE.jpg" alt="Megumi Jacket" class="product-image">
+                    <h3>Automotive Photography</h3>
+                    <p>Rp 250.000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+                <p>
+                     Kami bisa semua tema photography. Jika yang kalian inginkan tidak ada di katalog hubungi kami!. Kami siap melayani anda sepenuh hati.</p>
+                <div class="modal-features">
+                    <h4>Benefit:</h4>
+                    <ul>
+                        <li>Waktu Foto Tergantung Tema</li>
+                        <li>Hasil yang Tajam dan Berkualitas Tinggi</li>
+                        <li>Harga Termurah</li>
+                        <li>Pelayanan Bintang Lima</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo1.png" alt="AriozShoot Logo" class="footer-logo">
+                    <div class="brand-text">
+                        <h2>AriozShoot</h2>
+                        <p>Jawabanmu Ketika Sedang Mencari Fotografer yang Professional.</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="saran.html">Saran</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+62 -856-4164-7050</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>ariozshoot@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏢</span>
+                            <span>Jl. Dr Cipto No 512C, Semarang City.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2024 AriozShoot. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a>Privacy Policy</a>
+                    <span class="divider"> • </span>
+                    <a >Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        const productCards = document.querySelectorAll('.product-card');
+        const modal = document.getElementById('productModal');
+        const modalClose = modal.querySelector('.modal-close');
+        const modalImage = modal.querySelector('.modal-image');
+        const modalTitle = modal.querySelector('.modal-title');
+
+        productCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const image = card.querySelector('.product-image').src;
+                const title = card.querySelector('h3').textContent;
+                
+                modalImage.src = image;
+                modalTitle.textContent = title;
+                modal.style.display = 'block';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
